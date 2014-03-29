@@ -56,7 +56,7 @@ ln -s /app/php/bin/php bin/php
 # Check if drupal install profile
 if [ -f profile/build-*.make ] && [ ! -d www ]; then
   $DRUSH_BIN make profile/build-*.make www --prepare-install
-  echo "-----> Appending settings.php snippets..."
+  echo "-----> (trying to change here) Appending settings.php snippets..."
   for f in profile/tmp/snippets/*.settings.php
   do
     # Concatenate newline and snippet, then append to settings.php
