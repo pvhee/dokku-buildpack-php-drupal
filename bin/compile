@@ -67,14 +67,14 @@ if [ -f profile/build-*.make ] && [ ! -d www ]; then
 
 
   echo "-----> Installing site via drush..."
-  $DRUSH_BIN site-install minimal install_configure_form.update_status_module='array(FALSE,FALSE)' --db-url=mysql://root:hEiNGa11H3q0pCc8@172.17.42.1:49155/db  -y > /dev/null
+  $DRUSH_BIN site-install mz install_configure_form.update_status_module='array(FALSE,FALSE)' --db-url=mysql://root:hEiNGa11H3q0pCc8@172.17.42.1:49155/db  -y > /dev/null
+  $DRUSH_BIN mi --all
 
   echo '-----> Status checks...'
   $DRUSH_BIN status
 
   echo '-----> Installed modules...'
-  $DRUSH_BIN pml
-
+  # $DRUSH_BIN pml
 
   # $DRUSH_BIN --version
   # for f in profile/tmp/snippets/*.settings.php
