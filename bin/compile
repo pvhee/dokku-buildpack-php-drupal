@@ -61,7 +61,7 @@ if [ -f profile/build-*.make ] && [ ! -d www ]; then
   cd www
   ls
 
-  mkdir sites/default/files
+  # mkdir sites/default/files
   chmod -R 777 sites/default/files
   chmod -R 777 sites/default/settings.php
 
