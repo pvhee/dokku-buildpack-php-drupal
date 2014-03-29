@@ -58,7 +58,17 @@ if [ -f profile/build-*.make ] && [ ! -d www ]; then
   $DRUSH_BIN make profile/build-*.make www --prepare-install
   echo "-----> (trying to change here) Appending settings.php snippets..."
 
-  $DRUSH_BIN --version
+  pwd
+
+  mkdir sites/default/files
+  chmod -R 777 sites/default/files
+  chmod -R 777 sites/default/settings.php
+
+
+  echo "-----> Installing site via drush..."
+  $DRUSH_BIN site-install minimal --db-url=mysql://root:hEiNGa11H3q0pCc8@172.17.42.1:49155/db  -y
+
+  # $DRUSH_BIN --version
   # for f in profile/tmp/snippets/*.settings.php
   # do
   #   # Concatenate newline and snippet, then append to settings.php
