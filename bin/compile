@@ -58,12 +58,12 @@ if [ -f profile/build-*.make ] && [ ! -d www ]; then
   $DRUSH_BIN make profile/build-*.make www --prepare-install
   echo "-----> (trying to change here) Appending settings.php snippets..."
 
-  pwd
+  cd www
   ls
 
-  # mkdir sites/default/files
-  # chmod -R 777 sites/default/files
-  # chmod -R 777 sites/default/settings.php
+  mkdir sites/default/files
+  chmod -R 777 sites/default/files
+  chmod -R 777 sites/default/settings.php
 
 
   echo "-----> Installing site via drush..."
