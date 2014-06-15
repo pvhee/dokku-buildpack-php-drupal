@@ -17,6 +17,7 @@ Heroku supports many add-ons, all of which can be activated from the command-lin
 Configuration
 -------------
 
+
 The config files are bundled with the build pack itself:
 
 * conf/httpd.conf
@@ -35,9 +36,9 @@ Pre-compiling binaries
     make
     make install
     cd ..
-    
+
     # php
-    wget http://us2.php.net/get/php-5.3.6.tar.gz/from/us.php.net/mirror 
+    wget http://us2.php.net/get/php-5.3.6.tar.gz/from/us.php.net/mirror
     mv mirror php.tar.gz
     tar xzvf php.tar.gz
     cd php-5.3.6/
@@ -45,11 +46,11 @@ Pre-compiling binaries
     make
     make install
     cd ..
-    
+
     # php extensions
     mkdir /app/php/ext
     cp /usr/lib/libmysqlclient.so.15 /app/php/ext/
-    
+
     # pear
     apt-get install php5-dev php-pear
     pear config-set php_dir /app/php
@@ -57,8 +58,8 @@ Pre-compiling binaries
     mkdir /app/php/include/php/ext/apc
     cp /usr/lib/php5/20060613/apc.so /app/php/ext/
     cp /usr/include/php5/ext/apc/apc_serializer.h /app/php/include/php/ext/apc/
-    
-    
+
+
     # package
     cd /app
     echo '2.2.19' > apache/VERSION
